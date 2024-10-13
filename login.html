@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+    <title>Log In / Register</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row border rounded-4 p-3 bg-white shadow box-area">
+            <!-- Left box with image -->
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+                <div class="featured-image">
+                    <img src="images/featured image.jpg" class="img-fluid rounded-4" alt="Featured Image">
+                </div>
+            </div>
+
+            <!-- Right box with form (Login / Register Toggle) -->
+            <div class="col-md-6 right-box d-flex justify-content-center align-items-center">
+                <div class="content-box w-100">
+                    <!-- Login Form -->
+                    <div id="login-form" class="form-section">
+                        <div class="text-center">
+                            <p class="h5">Hello, again</p>
+                            <p class="text-secondary">We are happy to have you back</p>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                        </div>
+                        <div class="input-group mb-1">
+                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                        </div>
+                        <div class="input-group mb-5 d-flex justify-content-between">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="formCheck">
+                                <label for="formCheck" class="form-check-label text-secondary">
+                                    <small>Remember me</small>
+                                </label>
+                            </div>
+                            <div class="forgot">
+                                <small><a href="#">Forgot password</a></small>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-lg btn-custom w-100 fs-6">Login</button>
+                        </div>
+                        <div class="text-center">
+                            <p><small>Don't have an account? <a href="#" id="show-register">Register here</a></small></p>
+                        </div>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div id="register-form" class="form-section" style="display: none;">
+                        <div class="text-center">
+                            <p class="h5">Welcome!</p>
+                            <p class="text-secondary">Create your account</p>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Full Name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password">
+                        </div>
+                        <div class="input-group mb-3">
+                            <button class="btn btn-lg btn-custom w-100 fs-6">Register</button>
+                        </div>
+                        <div class="text-center">
+                            <p><small>Already have an account? <a href="#" id="show-login">Login here</a></small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"> </script>
+</body>
+</html>
