@@ -12,39 +12,31 @@ body{
     background-color: var(--white);
 }
 
-/* Custom Button Style */
 .btn-custom {
-    background-color: var(--primary); /* Replace with your variable or hex code */
-    border-color: var(--primary); /* For button borders */
-    color: var(--black); /* Ensure text is white for contrast */
+    background-color: var(--primary); 
+    border-color: var(--primary); 
+    color: var(--black);
 
-    /* Optional: Add hover effect */
     transition: background-color 0.3s ease;
 
-    /* Hover effect */
     &:hover {
-        background-color: var(--primary-hover); /* A darker shade or hover color */
+        background-color: var(--primary-hover);
         border-color: var(--primary-hover);
     }
 }
 
-
-/* Ensure the image is responsive */
 .left-box img {
-    max-width: 100%; /* Makes sure the image doesn't overflow the container */
-    height: auto; /* Keep the aspect ratio */
+    max-width: 100%; 
+    height: auto; 
 }
 
-/* Additional CSS for both forms */
 .left-box, .right-box {
-    flex: 1; /* Allow both the left and right box to take equal space */
-}
+    flex: 1; 
 
 .left-box {
-    padding: 15px; /* Adjust the padding if needed */
+    padding: 15px; 
 }
 
-/* Ensure that the container shrinks when screen size reduces */
 .box-area {
     max-width: 800px;
     width: 100%;
@@ -52,45 +44,42 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Add padding for spacing */
+    padding: 20px; 
 }
 
-/* Ensure form sections also shrink properly */
 .form-section {
     width: 100%;
     padding: 10px 0;
 }
 
 .input-group {
-    margin-bottom: 15px; /* Adds space between form components */
+    margin-bottom: 15px; 
 }
 
-/* Ensure spacing on smaller screens */
 @media screen and (max-width: 768px) {
     .box-area {
         width: 80%;
-        flex-direction: column; /* Stack left and right box vertically */
+        flex-direction: column; 
     }
 
     .left-box {
         margin-bottom: 20px;
     }
 }
-/* Add more space between input fields and other components */
+
+
 .input-group {
-    margin-bottom: 20px; /* Add space between input fields */
-}
+    margin-bottom: 20px; 
 
 .form-section p {
-    margin-bottom: 10px; /* Add space under paragraph tags (for text) */
+    margin-bottom: 10px; 
 }
 
-/* Ensure register/login link has some padding */
 .forgot, .register-link {
     margin-top: 10px;
 }
 
 button {
-    margin-top: 15px; /* Space between button and form */
+    margin-top: 15px; 
 }
 
