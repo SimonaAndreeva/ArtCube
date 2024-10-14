@@ -3,75 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css">
+    <link href="dist/output.css" rel="stylesheet">
     <title>Log In / Register</title>
 </head>
-<body>
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div class="row border rounded-4 p-3 bg-white shadow box-area">
-            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
-                <div class="featured-image">
-                    <img src="images/featured image.jpg" class="img-fluid rounded-4" alt="Featured Image">
-                </div>
+<body class="bg-white min-h-screen flex justify-center items-center">
+    <div class="container flex justify-center items-center min-h-screen">
+        <div class="flex flex-col md:flex-row max-w-4xl w-full bg-white shadow-lg rounded-4 p-6 box-area">
+            <!-- Left box with image -->
+            <div class="flex flex-col justify-center items-center md:w-1/2 p-4">
+                <img src="images/featured image.jpg" class="rounded-lg" alt="Featured Image">
             </div>
 
-            <div class="col-md-6 right-box d-flex justify-content-center align-items-center">
-                <div class="content-box w-100">
+            <!-- Right box with form -->
+            <div class="flex flex-col justify-center items-center md:w-1/2">
+                <div class="w-full">
                     <!-- Login Form -->
                     <div id="login-form" class="form-section">
-                        <div class="text-center">
-                            <p class="h5">Hello, again</p>
-                            <p class="text-secondary">We are happy to have you back</p>
+                        <div class="text-center mb-6">
+                            <p class="text-lg font-semibold">Hello, again</p>
+                            <p class="text-gray-500">We are happy to have you back</p>
                         </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
+                        <div class="mb-4">
+                            <input type="text" class="w-full p-3 border rounded-lg bg-gray-100 text-sm" placeholder="Email address">
                         </div>
-                        <div class="input-group mb-1">
-                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
+                        <div class="mb-2">
+                            <input type="password" class="w-full p-3 border rounded-lg bg-gray-100 text-sm" placeholder="Password">
                         </div>
-                        <div class="input-group mb-5 d-flex justify-content-between">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="formCheck">
-                                <label for="formCheck" class="form-check-label text-secondary">
-                                    <small>Remember me</small>
-                                </label>
-                            </div>
-                            <div class="forgot">
-                                <small><a href="#">Forgot password</a></small>
-                            </div>
+                        <div class="flex justify-between items-center mb-6">
+                            <label class="flex items-center text-gray-500 text-sm">
+                                <input type="checkbox" class="mr-2"> Remember me
+                            </label>
+                            <a href="#" class="text-sm text-gray-500">Forgot password</a>
                         </div>
-                        <div class="input-group mb-3">
-                            <button class="btn btn-lg btn-custom w-100 fs-6">Login</button>
+                        <div class="mb-4">
+                            <button class="w-full p-3 bg-primary text-black rounded-lg hover:bg-primary-hover">Login</button>
                         </div>
                         <div class="text-center">
-                            <p><small>Don't have an account? <a href="#" id="show-register">Register here</a></small></p>
+                            <p class="text-sm">Don't have an account? <a href="#" id="show-register" class="text-primary">Register here</a></p>
                         </div>
                     </div>
 
                     <!-- Register Form -->
-                    <div id="register-form" class="form-section" style="display: none;">
+                    <div id="register-form" class="form-section hidden">
+                        <div class="text-center mb-6">
+                            <p class="text-lg font-semibold">Welcome!</p>
+                            <p class="text-gray-500">Create your account</p>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" class="w-full p-3 border rounded-lg bg-gray-100 text-sm" placeholder="Full Name">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" class="w-full p-3 border rounded-lg bg-gray-100 text-sm" placeholder="Email address">
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" class="w-full p-3 border rounded-lg bg-gray-100 text-sm" placeholder="Password">
+                        </div>
+                        <div class="mb-4">
+                            <input type="password" class="w-full p-3 border rounded-lg bg-gray-100 text-sm" placeholder="Confirm Password">
+                        </div>
+                        <div class="mb-4">
+                            <button class="w-full p-3 bg-primary text-black rounded-lg hover:bg-primary-hover">Register</button>
+                        </div>
                         <div class="text-center">
-                            <p class="h5">Welcome!</p>
-                            <p class="text-secondary">Create your account</p>
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Full Name">
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email address">
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
-                        </div>
-                        <div class="input-group mb-3">
-                            <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Confirm Password">
-                        </div>
-                        <div class="input-group mb-3">
-                            <button class="btn btn-lg btn-custom w-100 fs-6">Register</button>
-                        </div>
-                        <div class="text-center">
-                            <p><small>Already have an account? <a href="#" id="show-login">Login here</a></small></p>
+                            <p class="text-sm">Already have an account? <a href="#" id="show-login" class="text-primary">Login here</a></p>
                         </div>
                     </div>
                 </div>
@@ -79,6 +73,6 @@
         </div>
     </div>
 
-    <script src="scripts.js"> </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
